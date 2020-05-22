@@ -11,7 +11,7 @@ function initMap(){
     
       // Try HTML5 geolocation.
       if (navigator.geolocation) {
-        navigator.geolocation.watchPosition(function(position) {
+        navigator.geolocation.getCurrentPosition(function(position) {
           var pos = {
             lat: +position.coords.latitude,
             lng: +position.coords.longitude
@@ -68,6 +68,14 @@ document.head.appendChild(script);
 var locations = [
     {lat: 26.1437697, lng: 91.5617644},
     {lat: 26.15195, lng: 91.7671822},
+    {lat: 26.15236, lng: 91.7682792},
+    {lat: 26.15236, lng: 91.7682792},
+    {lat: 26.15236, lng: 91.7682792},
+    {lat: 26.15236, lng: 91.7682792},
+    {lat: 26.15236, lng: 91.7682792},
+    {lat: 26.15236, lng: 91.7682792},
+    {lat: 26.15236, lng: 91.7682792},
+    {lat: 26.15236, lng: 91.7682792},
     {lat: 26.15236, lng: 91.7682792},
     {lat: 26.15236, lng: 91.7682792},
     {lat: 26.1653026, lng: 91.7575289},
