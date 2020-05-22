@@ -20,11 +20,8 @@ function initMap(){
         map = new google.maps.Map(document.getElementById('map'), {
             center: pos,
             zoom: 15,
-            // mapTypeId: 'satellite'
+            mapTypeId: 'satellite'
           });
-        
-        // var trafficLayer = new google.maps.TrafficLayer();
-        // trafficLayer.setMap(map);
         
         console.log(pos);
           var marker = new google.maps.Marker({
@@ -53,14 +50,14 @@ function initMap(){
 
         }, function() {
           handleLocationError(true, map.getCenter());
-        });
+        },{timeout:10000});
       } else {
         // Browser doesn't support Geolocation
         handleLocationError(false, map.getCenter());
       }  
     }
 
-    function handleLocationError(browserHasGeolocation, infoWindow, pos) {
+    function handleLocationError(browserHasGeolocation, pos) {
       alert('Error: The Geolocation service failed. Error: Your browser doesn\'t support geolocation.');
     }
 document.head.appendChild(script);
