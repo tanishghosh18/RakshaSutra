@@ -20,7 +20,6 @@ function initMap() {
             map = new google.maps.Map(document.getElementById('map'), {
                 center: pos,
                 zoom: 15,
-                mapTypeId: 'satellite'
             });
 
             console.log(pos);
